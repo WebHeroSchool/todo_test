@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <t1 style={{
+        <h1 style={{
           color: 'grey',
           fontSize: 35
         }}>
-          First app</t1>
+          First app</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           {variable}

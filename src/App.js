@@ -6,7 +6,7 @@ const ItemList = () => (<ul>
   <li>The third task</li>
 </ul>)
 const App = () => (<div>
-  <t1>My item list:</t1>
+  <h1>My item list:</h1>
   <ItemList /></div>);
 
   export default App;

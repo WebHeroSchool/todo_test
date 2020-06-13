@@ -17,11 +17,12 @@ const items = [
   }
 ];
 
-const App = () => (<div className={styles.wrap}>
-  <h1 className={styles.title}>TODOS</h1>
-  <InputItem />
-  <ItemList items={items} />
-  <Footer count = {3} />
+const App = () => (
+  <div className={styles.wrap}>
+    <h1 className={styles.title}>TODOS</h1>
+    <InputItem />
+    <ItemList items={items} />
+    <Footer count = {3} />
   </div>);
 
   export default App;

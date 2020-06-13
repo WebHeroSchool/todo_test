@@ -3,6 +3,7 @@ import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Item from '../Item/Item';
 import Footer from '../Footer/Footer';
+import './App.css';
 
 const items = [
   { 
@@ -16,11 +17,12 @@ const items = [
   }
 ];
 
-const App = () => (<div>
-  <h1>TODOS</h1>
-  <InputItem />
-  <ItemList items={items} />
-  <Footer count = {3} />
+const App = () => (
+  <div className="wrap">
+    <h1 className="wrap__title">TODOS</h1>
+    <InputItem />
+    <ItemList items={items} />
+    <Footer count = {3} />
   </div>);
 
   export default App;

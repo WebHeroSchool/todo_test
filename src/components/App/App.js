@@ -3,23 +3,26 @@ import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Item from '../Item/Item';
 import Footer from '../Footer/Footer';
-import './App.css';
+import styles from './App.module.css';
 
 const items = [
   { 
-    value: 'Учить React'
+    value: 'Учить React',
+    isDone: false
   },
   {
     value: 'Работа',
+    isDone: true
   },
   {
-    value: 'Пробежка'
+    value: 'Пробежка',
+    isDone: true
   }
 ];
 
 const App = () => (
-  <div className="wrap">
-    <h1 className="wrap__title">TODOS</h1>
+  <div className={styles.wrap}>
+    <h1 className={styles.title}>TODOS</h1>
     <InputItem />
     <ItemList items={items} />
     <Footer count = {3} />

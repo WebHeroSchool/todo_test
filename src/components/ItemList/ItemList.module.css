@@ -2,7 +2,7 @@
   padding-bottom: 15px;
 }
 
-.item__wrap { 
+.item__wrap {
   display: flex;
   justify-content: space-between;
 }

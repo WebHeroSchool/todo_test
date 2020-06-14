@@ -1,10 +1,27 @@
 import React from 'react';
 import Item from '../Item/Item';
+import styles from './ItemList.module.css';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
+import DeleteIcon from '@material-ui/icons/Delete';
 
-const ItemList = ( {items} ) => (<ul>
+const ItemList = ( {items} ) => (<ul className={styles.wrap}>
     {items.map(item => (<li key={item.value}>
-        <Item value={item.value} isDone={item.isDone} /></li>
-    ))}
+      <div className={styles.item__wrap}>
+        <FormControlLabel
+          control={<Checkbox checked={item.isDone} name="checkedA" />}
+          label={<Item value={item.value} isDone={item.isDone} />}
+        />
+        <Tooltip title="Удалить">
+          <IconButton aria-label="delete">
+            <DeleteIcon fontSize="small" />
+          </IconButton>
+        </Tooltip>
+      </div>
+      </li>
+       ))}
 </ul>);
 
 export default ItemList;

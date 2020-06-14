@@ -7,12 +7,19 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const ItemList = ( {items} ) => (<ul className={styles.wrap}>
+const ItemList = ({ items, onClickDone }) => (<ul className={styles.wrap}>
     {items.map(item => (<li key={item.value}>
       <div className={styles.item__wrap}>
-        <FormControlLabel
-          control={<Checkbox checked={item.isDone} name="checkedA" />}
-          label={<Item value={item.value} isDone={item.isDone} />}
+      <FormControlLabel
+        control={
+            <Checkbox
+                checked={item.isDone}
+                value="checkedB"
+                color="primary"
+                onClick={() => onClickDone(item.isDone)}
+            />
+        }
+          label={<Item value={item.value} isDone={item.isDone} onClickDone={onClickDone} />}
         />
         <Tooltip title="Удалить">
           <IconButton aria-label="delete">

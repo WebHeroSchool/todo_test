@@ -1,12 +1,13 @@
 .wrap {
-    padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 
-.item__wrap {
-    display: flex;
-    justify-content: space-between;
+.item__wrap { 
+  display: flex;
+  justify-content: space-between;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
+\n

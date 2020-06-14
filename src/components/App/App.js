@@ -5,29 +5,33 @@ import Item from '../Item/Item';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const items = [
-  { 
-    value: 'Учить React',
-    isDone: false
-  },
-  {
-    value: 'Работа',
-    isDone: true
-  },
-  {
-    value: 'Пробежка',
-    isDone: true
+class App extends React.Component {
+  render () {
+    const items = [
+      { 
+        value: 'Учить React',
+        isDone: false
+      },
+      {
+        value: 'Работа',
+        isDone: true
+      },
+      {
+        value: 'Пробежка',
+        isDone: true
+      }
+    ];
+
+  return (
+    <div className={styles.wrap}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>To Do List</h1>
+        <InputItem />
+        <ItemList items={items} />
+        <Footer count = {1} />
+      </div>
+    </div>);
   }
-];
+}
 
-const App = () => (
-  <div className={styles.wrap}>
-    <div className={styles.content}>
-      <h1 className={styles.title}>To Do List</h1>
-      <InputItem />
-      <ItemList items={items} />
-      <Footer count = {1} />
-    </div>
-  </div>);
-
-  export default App;
+export default App;

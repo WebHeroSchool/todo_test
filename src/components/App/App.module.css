@@ -1,9 +1,13 @@
 .wrap {
-    display: block;
-    margin: auto;
-    width: 300px;
+  display: block;
+  margin: auto;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .3);
 }
 
-.title {
-    font-family: 'Montserrat', sans-serif;
+.content {
+  text-align: center;
+  padding: 50px;
 }

@@ -22,10 +22,12 @@ const items = [
 
 const App = () => (
   <div className={styles.wrap}>
-    <h1 className={styles.title}>TODOS</h1>
-    <InputItem />
-    <ItemList items={items} />
-    <Footer count = {3} />
+    <div className={styles.content}>
+      <h1 className={styles.title}>To Do List</h1>
+      <InputItem />
+      <ItemList items={items} />
+      <Footer count = {1} />
+    </div>
   </div>);
 
   export default App;

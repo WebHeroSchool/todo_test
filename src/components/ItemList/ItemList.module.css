@@ -1,0 +1,12 @@
+.wrap {
+  padding-bottom: 15px;
+}
+
+.item__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  list-style-type: none;
+}

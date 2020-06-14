@@ -30,7 +30,7 @@ class App extends React.Component {
         <ItemList items={items} />
         <Footer count = {1} />
       </div>
-    </div>);
+    </div>)
   }
 };
 

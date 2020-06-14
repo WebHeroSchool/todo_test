@@ -6,8 +6,8 @@ import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
 class App extends React.Component {
-  render () {
-    const items = [
+  state = {
+    items: [
       { 
         value: 'Учить React',
         isDone: false
@@ -20,17 +20,19 @@ class App extends React.Component {
         value: 'Пробежка',
         isDone: true
       }
-    ];
+    ]
+  };
 
-  return (
-    <div className={styles.wrap}>
-      <div className={styles.content}>
-        <h1 className={styles.title}>To Do List</h1>
-        <InputItem />
-        <ItemList items={items} />
-        <Footer count = {1} />
-      </div>
-    </div>);
+  render () {
+    return (
+      <div className={styles.wrap}>
+        <div className={styles.content}>
+          <h1 className={styles.title}>To Do List</h1>
+          <InputItem />
+          <ItemList items={this.state.items} />
+          <Footer count = {1} />
+        </div>
+      </div>);
   }
 }
 

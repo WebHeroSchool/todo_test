@@ -22,7 +22,8 @@ class App extends React.Component {
       }
     ]
   };
-
+  
+  // Кастомный console
   onClickDone = isDone => console.log(isDone);
 
   render () {

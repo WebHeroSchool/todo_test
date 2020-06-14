@@ -22,6 +22,9 @@ class App extends React.Component {
       }
     ]
   };
+  
+  // Кастомный console
+  onClickDone = isDone => console.log(isDone);
 
   render () {
     return (
@@ -29,7 +32,7 @@ class App extends React.Component {
         <div className={styles.content}>
           <h1 className={styles.title}>To Do List</h1>
           <InputItem />
-          <ItemList items={this.state.items} />
+          <ItemList items={this.state.items} onClickDone = {this.onClickDone} />
           <Footer count = {1} />
         </div>
       </div>);

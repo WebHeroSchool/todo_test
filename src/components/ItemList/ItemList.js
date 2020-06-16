@@ -1,7 +1,6 @@
 import React from 'react';
 import Item from '../Item/Item';
 import styles from './ItemList.module.css';
-import classnames from 'classnames';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
@@ -35,7 +34,6 @@ const ItemList = ({ items, value, onClickDone, onClickDelete, id }) => (<ul clas
             >
             <DeleteIcon 
               fontSize="small"
-              classnames = {{ label: [styles.button__delete]}}
               onClick={() => onClickDelete(item.id)}
               />
           </IconButton>

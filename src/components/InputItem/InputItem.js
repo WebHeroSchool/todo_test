@@ -19,7 +19,7 @@ class InputItem extends React.Component {
         else {
             this.setState({
                 inputError: true
-            })
+            });
     }
 };
 
@@ -37,7 +37,7 @@ class InputItem extends React.Component {
                     onChange={event => this.setState({ 
                         inputValue: event.target.value.toUpperCase(),
                         inputError: false
-                    })}
+                    })};
                 />
             <div className={styles.button}>
                 <Button 
@@ -48,7 +48,7 @@ class InputItem extends React.Component {
                     Добавить задание
                 </Button>
             </div>
-        </div>)
+        </div>);
         }
     }
 

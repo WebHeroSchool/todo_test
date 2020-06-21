@@ -23,6 +23,6 @@ const Footer = ({ count }) => (<footer>
 
 Footer.propTypes = {
     count: PropTypes.number.isRequired
-}
+};
 
 export default Footer;

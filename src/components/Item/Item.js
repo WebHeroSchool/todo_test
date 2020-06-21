@@ -16,6 +16,6 @@ Item.propTypes = {
     value: PropTypes.string.isRequired,
     isDone: PropTypes.bool.isRequired,
     id: PropTypes.number.isRequired
-}
+};
 
 export default Item;

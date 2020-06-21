@@ -58,6 +58,6 @@ InputItem.propTypes = {
     inputError: PropTypes.bool,
     onClickAdd: PropTypes.func.isRequired,
     onButtonClick: PropTypes.func
-}
+};
 
 export default InputItem;

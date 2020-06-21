@@ -6,6 +6,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import DeleteIcon from '@material-ui/icons/Delete';
+import PropTypes from 'prop-types';
 
 const ItemList = ({ items, value, onClickDone, onClickDelete, id }) => (<ul className={styles.wrap}>
     {items.map(item => (<li key={item.value}>
@@ -36,5 +37,11 @@ const ItemList = ({ items, value, onClickDone, onClickDelete, id }) => (<ul clas
       </li>
        ))}
 </ul>);
+
+ItemList.propTypes = {
+  items: PropTypes.array.isRequired,
+  onClickDone: PropTypes.func.isRequired,
+  onClickDelete: PropTypes.func.isRequired
+}
 
 export default ItemList;

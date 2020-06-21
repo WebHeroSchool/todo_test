@@ -15,7 +15,7 @@ const ItemList = ({ items, value, onClickDone, onClickDelete, id }) => (<ul clas
             <Checkbox
                 checked={item.isDone}
                 value="checkedB"
-                color="primary"
+                color="default"
                 onClick={() => onClickDone(item.id)}
             />
         }
@@ -27,15 +27,9 @@ const ItemList = ({ items, value, onClickDone, onClickDelete, id }) => (<ul clas
                   onClickDelete={onClickDelete}
                 />}
         />
-        <Tooltip title="Удалить" >
-          <IconButton 
-            aria-label="delete"
-            className={styles.button__delete}
-            >
-            <DeleteIcon 
-              fontSize="small"
-              onClick={() => onClickDelete(item.id)}
-              />
+        <Tooltip title="Удалить" onClick={() => onClickDelete(item.id)} >
+          <IconButton aria-label="delete">
+            <DeleteIcon fontSize="small" />
           </IconButton>
         </Tooltip>
       </div>

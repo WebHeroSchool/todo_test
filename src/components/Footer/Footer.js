@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import Button from '@material-ui/core/Button';
-import { StylesProvider } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const Footer = ({ count }) => (<footer>
     <p>Осталось выполнить дел: {count} </p>
@@ -20,5 +20,9 @@ const Footer = ({ count }) => (<footer>
         </Button>
     </div>
 </footer>);
+
+Footer.propTypes = {
+    count: PropTypes.number.isRequired
+};
 
 export default Footer;

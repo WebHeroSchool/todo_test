@@ -24,6 +24,7 @@ class App extends React.Component {
         id: 3
       }
     ],
+
     count: 3
   };
 
@@ -64,7 +65,9 @@ class App extends React.Component {
         id: state.count + 1
       }
     ],
+    
     count: state.count +1
+    
   }))
 
   render () {
@@ -74,7 +77,7 @@ class App extends React.Component {
           <h1 className={styles.title}>To Do List</h1>
           <InputItem onClickAdd={this.onClickAdd} />
           <ItemList items={this.state.items} onClickDone = {this.onClickDone} onClickDelete = {this.onClickDelete} />
-          <Footer count = {1} />
+          <Footer />
         </div>
       </div>);
   }

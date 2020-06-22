@@ -9,33 +9,33 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import PropTypes from 'prop-types';
 
 const ItemList = ({ items, value, onClickDone, onClickDelete, id }) => (<ul className={styles.wrap}>
-    {items.map(item => (<li key={item.value}>
-      <div className={styles.item__wrap}>
-      <FormControlLabel
-        control={
-            <Checkbox
-                checked={item.isDone}
-                value="checkedB"
-                color="default"
-                onClick={() => onClickDone(item.id)}
-            />
-        }
-          label={<Item 
-                  value={item.value}
-                  isDone={item.isDone}
-                  id={item.id}
-                  onClickDone={onClickDone}
-                  onClickDelete={onClickDelete}
-                />}
-        />
-        <Tooltip title="Удалить" onClick={() => onClickDelete(item.id)} >
-          <IconButton aria-label="delete">
-            <DeleteIcon fontSize="small" />
-          </IconButton>
-        </Tooltip>
-      </div>
-      </li>
-       ))}
+  {items.map(item => (<li key={item.value}>
+    <div className={styles.item__wrap}>
+    <FormControlLabel
+      control={
+          <Checkbox
+              checked={item.isDone}
+              value="checkedB"
+              color="default"
+              onClick={() => onClickDone(item.id)}
+          />
+      }
+        label={<Item 
+                value={item.value}
+                isDone={item.isDone}
+                id={item.id}
+                onClickDone={onClickDone}
+                onClickDelete={onClickDelete}
+              />}
+      />
+      <Tooltip title="Удалить" onClick={() => onClickDelete(item.id)} >
+        <IconButton aria-label="delete">
+          <DeleteIcon fontSize="small" />
+        </IconButton>
+      </Tooltip>
+    </div>
+    </li>
+     ))}
 </ul>);
 
 ItemList.propTypes = {

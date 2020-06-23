@@ -49,7 +49,7 @@ const App = () => {
         return newItem;
     });
 
-    setItems(newItemList)
+    setItems(newItemList);
   };
   
   const onClickDelete = id => {
@@ -63,7 +63,7 @@ const App = () => {
     });
 
     setItems(newItemList)
-    setCount((count) => count-1)
+    setCount((count) => count-1);
   }
 
   const onClickAdd = value => {
@@ -76,7 +76,7 @@ const App = () => {
       }
     ];
     setItems(newItemList);
-    setCount((count) => count+1)
+    setCount((count) => count+1);
   }
 
     return (

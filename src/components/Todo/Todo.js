@@ -70,7 +70,7 @@ const Todo = () => {
     ];
     setItems(newItemList);
     setCount(count + 1);
-  }
+  };
 
     return (   
       <div className={styles.wrap}>

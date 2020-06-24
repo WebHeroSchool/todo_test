@@ -62,7 +62,7 @@ const App = () => {
       
     });
 
-    setItems(newItemList)
+    setItems(newItemList);
     setCount((count) => count-1);
   }
 

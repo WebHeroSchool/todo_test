@@ -63,7 +63,7 @@ const App = () => {
     });
 
     setItems(newItemList);
-    setCount((count) => count-1);
+    setCount(count - 1);
   }
 
   const onClickAdd = value => {
@@ -76,7 +76,7 @@ const App = () => {
       }
     ];
     setItems(newItemList);
-    setCount((count) => count+1);
+    setCount(count + 1);
   }
 
     return (

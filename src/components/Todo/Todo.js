@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Item from '../Item/Item';
@@ -31,13 +31,6 @@ const Todo = () => {
   const [items, setItems] = useState(initialState.items);
   const [count, setCount] = useState(initialState.count);
 
-  useEffect( () => {
-    console.log('update');
-  });
-  useEffect( () => {
-    console.log('mount');
-  }, []);
-
   const onClickDone = id => {
     const newItemList = items.map(item => {
       const newItem = { ...item };
@@ -63,8 +56,8 @@ const Todo = () => {
     });
 
     setItems(newItemList);
-    setCount((count) => count-1);
-  }
+    setCount(count - 1);
+  };
 
   const onClickAdd = value => {
     const newItemList = [
@@ -76,7 +69,7 @@ const Todo = () => {
       }
     ];
     setItems(newItemList);
-    setCount((count) => count+1);
+    setCount(count + 1);
   }
 
     return (   

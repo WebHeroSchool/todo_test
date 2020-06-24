@@ -10,8 +10,8 @@ import Contacts from '../Contacts/Contacts';
 
 import styles from './App.module.css';
 
-const App = () => 
-  (<Router>
+const App = () => {
+  return (<Router>
     <div className={styles.wrap}>   
 
       <div className={styles.paper__wrap}>
@@ -31,7 +31,8 @@ const App = () =>
       </div>
     
     </div>
-  </Router>);
+  </Router>)
+};
 
 
 export default App;

@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+import styles from './App.module.css';
 
 import Todo from '../Todo/Todo';
 import About from '../About/About';
 import Contacts from '../Contacts/Contacts';
-
-import styles from './App.module.css';
 
 const App = () => {
   return (<Router>

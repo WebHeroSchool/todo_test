@@ -31,8 +31,8 @@ const App = () => {
       </div>
     
     </div>
-  </Router>)
-};
+  </Router>);
+}
 
 
 export default App;

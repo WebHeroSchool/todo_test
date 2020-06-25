@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
-import Item from '../Item/Item';
 import Footer from '../Footer/Footer';
 import styles from './Todo.module.css';
 
@@ -81,7 +80,7 @@ const Todo = () => {
           <Footer count = {count} />
         </div>
       </div>);
-  }
+  };
 
 
 export default Todo;

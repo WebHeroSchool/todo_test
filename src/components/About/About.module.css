@@ -42,7 +42,7 @@
   animation-delay: -.75s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(4) {
   transform: rotate(90deg);
   animation-delay: -.6666666666666666s;
@@ -54,43 +54,43 @@
   animation-delay: -.5833333333333334s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(6) {
   transform: rotate(150deg);
   animation-delay: -.5s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(7) {
   transform: rotate(180deg);
   animation-delay: -.4166666666666667s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(8) {
   transform: rotate(210deg);
   animation-delay: -.3333333333333333s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(9) {
   transform: rotate(240deg);
   animation-delay: -.25s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(10) {
   transform: rotate(270deg);
   animation-delay: -.16666666666666666s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(11) {
   transform: rotate(300deg);
   animation-delay: -.08333333333333333s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(12) {
   transform: rotate(330deg);
   animation-delay: 0s;
@@ -123,7 +123,7 @@
   display: flex;
   justify-content: space-evenly;
 }
-  
+
 .user__wrap {
   line-height: .8;
   padding-top: 40px;

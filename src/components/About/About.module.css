@@ -6,6 +6,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -35,7 +36,7 @@
   animation-delay: -.8333333333333334s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(3) {
   transform: rotate(60deg);
   animation-delay: -.75s;
@@ -147,7 +148,7 @@
   font-weight: 500;
   display: flex;
   justify-content: center;
-}  
+}
 
 .item {
   border: 1px solid #ff4081;

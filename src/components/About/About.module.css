@@ -3,11 +3,9 @@
 }
 
 @keyframes ldio {
-
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
@@ -23,6 +21,7 @@
   height: 24px;
   border-radius: 6px / 12px;
   transform-origin: 6px 52px;
+  box-sizing: content-box;
 }
 
 .ldio div:nth-child(1) {
@@ -30,7 +29,7 @@
   animation-delay: -.9166666666666666s;
   background: #fe718d;
 }
-  
+
 .ldio div:nth-child(2) {
   transform: rotate(30deg);
   animation-delay: -.8333333333333334s;
@@ -57,7 +56,7 @@
   
 .ldio div:nth-child(6) {
   transform: rotate(150deg);
-  animation-delay: -0.5s;
+  animation-delay: -.5s;
   background: #fe718d;
 }
   
@@ -114,10 +113,6 @@
   transform-origin: 0 0;
 }
 
-.ldio div {
-  box-sizing: content-box; 
-}
-
 .avatar {
   width: 200px;
   height: 200px;
@@ -145,6 +140,15 @@
   padding-right: 40px;
 }
 
+.repo {
+  text-decoration: none;
+  color: #ff4081;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}  
+
 .item {
   border: 1px solid #ff4081;
   border-radius: 10px;
@@ -159,15 +163,6 @@
 
 .item:hover .repo {
   color: #fff;
-}
-
-.repo {
-  text-decoration: none;
-  color: #ff4081;
-  font-size: 20px;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
 }
 
 h3,

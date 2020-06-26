@@ -29,7 +29,7 @@ class About extends React.Component {
                 isLoading: false,
                 isError: true,
                 error: error.message
-            })
+            });
           });
 
         octokit.users.getByUsername({

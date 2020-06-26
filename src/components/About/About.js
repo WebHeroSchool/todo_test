@@ -71,7 +71,7 @@ class About extends React.Component {
                             </li>))}
                         </ol>
                 </div>}
-                {isError $$ <Alert severity="error">SORRY, THE PAGE NOT FOUND</Alert>}
+                {isError && <Alert severity="error">SORRY, THE PAGE NOT FOUND</Alert>}
             </h1>
         );
     }

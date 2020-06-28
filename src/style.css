@@ -1,12 +1,12 @@
 body {
-  /* background-color: #f1efef; */
-  background-image: url(./img/stockvault-abstract-blurred-beautiful-soft-pink-cloud-background268659.jpg);
+  background-color: #e5e5e5;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
 }
 
 .MuiFormControl-root {
   width: 100%;
 }
-

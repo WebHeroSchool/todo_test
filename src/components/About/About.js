@@ -10,9 +10,8 @@ class About extends React.Component {
     state = {
         isLoading: true,
         repoList: [],
-        infoUser: [],
-        isError: false,
-        error: ''
+        infoUser: {},
+        isError: false
     }
 
     componentDidMount() {
@@ -55,23 +54,28 @@ class About extends React.Component {
             <h1 className={styles.title}>
                 { isLoading ? <div className={styles.loadingio}><div className={styles.ldio}>
                 <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                </div></div> : <div>
-                    <div className={styles.user}>
-                        <img src={infoUser.avatar_url} className={styles.avatar}></img>
-                            <div className={styles.user__wrap}>
-                                <h3 className={styles.user__name}>{infoUser.name}</h3>
-                                <h4 className={styles.user__info}>{infoUser.bio}</h4>
-                                <h4 className={styles.user__info}>{infoUser.location}</h4>
+                </div></div> : 
+                    <div>
+                        { isError ? <Alert severity="error">SORRY, THE PAGE NOT FOUND</Alert> :
+                            <div> 
+                                <div className={styles.user}>
+                                    <img src={infoUser.avatar_url} className={styles.avatar}></img>
+                                        <div className={styles.user__wrap}>
+                                            <h3 className={styles.user__name}>{infoUser.name}</h3>
+                                            <h4 className={styles.user__info}>{infoUser.bio}</h4>
+                                            <h4 className={styles.user__info}>{infoUser.location}</h4>
+                                         </div>
+                                </div>
+                                <h3>Мои репозитории:</h3>
+                                    <ol className={styles.list}>
+                                        {repoList.map(repo => (<li key={repo.id} className={styles.item}>
+                                        <a href={repo.html_url} className={styles.repo}>{repo.name}</a>
+                                        </li>))}
+                                    </ol>
                             </div>
+                        }
                     </div>
-                    <h3>Мои репозитории:</h3>
-                        <ol className={styles.list}>
-                            {repoList.map(repo => (<li key={repo.id} className={styles.item}>
-                                <a href={repo.html_url} className={styles.repo}>{repo.name}</a>
-                            </li>))}
-                        </ol>
-                </div>}
-                {isError && <Alert severity="error">SORRY, THE PAGE NOT FOUND</Alert>}
+                }
             </h1>
         );
     }

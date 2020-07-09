@@ -16,23 +16,23 @@ class Footer extends React.Component {
                     <div className={styles.title__button}>
                             <button className={classnames({
                                     [styles.button]: true,
-                                    [styles.selected]: filteredItems === "Завершенные"
+                                    [styles.selected]: filteredItems === 'Завершенные'
                                     })}
-                                onClick={() => onClickFilter("Завершенные")}>
+                                onClick={() => onClickFilter('Завершенные')}>
                                 Завершенные <span>{doneItems}</span>
                             </button>
                             <button className={classnames({
                                     [styles.button]: true,
-                                    [styles.selected]: filteredItems === "Незавершенные"
+                                    [styles.selected]: filteredItems === Незавершенные
                                     })}
-                                onClick={() => onClickFilter("Незавершенные")}>
+                                onClick={() => onClickFilter('Незавершенные')}>
                                 Незавершенные <span>{activeItems}</span>
                             </button>
                             <button className={classnames({
                                     [styles.button]: true,
-                                    [styles.selected]: filteredItems === "Все"
+                                    [styles.selected]: filteredItems === 'Все'
                                     })}
-                                onClick={() => onClickFilter("Все")}>
+                                onClick={() => onClickFilter('Все')}>
                                 Все <span>{all}</span>
                             </button>
                     </div>

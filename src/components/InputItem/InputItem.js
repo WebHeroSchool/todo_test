@@ -12,7 +12,7 @@ class InputItem extends React.Component {
         errorText: ''
     };
 
-    onLabelChange = (event) => {
+    onLabelChange = event => {
         this.setState({
           inputValue: event.target.value,
         });
@@ -21,7 +21,7 @@ class InputItem extends React.Component {
     onButtonClick = () => {
         let { onClickAdd, items } = this.props;
         let error = false;
-        items.forEach((item) => {
+        items.forEach(item => {
           if (item.value === this.state.inputValue) {
             error = true;
           }
@@ -61,7 +61,7 @@ class InputItem extends React.Component {
                     className={styles.input}
                     placeholder="Просто введите сюда название дела..." 
                     value={this.state.inputValue}
-                    onChange={(event) => this.onLabelChange(event)}
+                    onChange={event => this.onLabelChange(event)}
                 />
                 <Fab size='small'
                     aria-label='add'

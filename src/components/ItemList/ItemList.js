@@ -8,7 +8,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import CancelIcon from '@material-ui/icons/Cancel';
-import frame from './img/frame.png'
+import frame from './img/frame.png';
 import PropTypes from 'prop-types';
 
 class ItemList extends React.Component {
@@ -54,7 +54,7 @@ class ItemList extends React.Component {
                 <p className={styles.noItems__text}>Вы ещё не добавили ни одной задачи</p>
                 <p className={styles.noItems__now}>Сделайте это прямо сейчас!</p>
             </div>}
-        </div>)
+        </div>);
   }
 }
 

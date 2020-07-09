@@ -9,7 +9,7 @@ const Todo = () => {
   const initialState = {
     items: [],
     count: 0,
-    filteredItems: "Все"
+    filteredItems: 'Все'
   };
 
   const [items, setItems] = useState(initialState.items);
@@ -39,10 +39,10 @@ const Todo = () => {
     setItems(newItemList);
   };
   
-  const onClickDelete = (id) => {
-    const newItemList = items.filter((item) => item.id !== id);
+  const onClickDelete = id => {
+    const newItemList = items.filter(item => item.id !== id);
     setItems(newItemList);
-    setCount((count) => count - 1);
+    setCount(count => count - 1);
   };
 
   const onClickAdd = value => {
@@ -75,7 +75,7 @@ const Todo = () => {
         default: 
             filter = items;
             break;
-   };
+   }
  
     return (
       <Card className={styles.card}>

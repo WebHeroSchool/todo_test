@@ -44,7 +44,7 @@
 }
 
 .list {
-  padding: 20px 32px 0px 32px;
+  padding: 20px 32px 0 32px;
 }
 
 .repo {
@@ -83,14 +83,14 @@
   font-size: 12px;
   display: flex;
   align-items: center;
-  padding-bottom: 9px
+  padding-bottom: 9px;
 }
 
 .mail,
 .phone {
   padding-left: 4px;
   font-weight: normal;
-  font-size: 12px;    
+  font-size: 12px;
 }
 
 .social__media {
@@ -140,7 +140,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #ffc700;;
+  background-color: #ffc700;
   left: -30%;
   bottom: 0;
 }
@@ -190,7 +190,7 @@
 .pagination__button {
   width: 73px;
   height: 32px;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   border-radius: 37px;
   color: #356eff;
   margin-right: 10px;

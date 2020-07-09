@@ -12,9 +12,9 @@ class InputItem extends React.Component {
         errorText: ''
     };
 
-    onLabelChange = (e) => {
+    onLabelChange = (event) => {
         this.setState({
-          inputValue: e.target.value,
+          inputValue: event.target.value,
         });
       };
 
@@ -23,27 +23,27 @@ class InputItem extends React.Component {
         let error = false;
         items.forEach((item) => {
           if (item.value === this.state.inputValue) {
-            error = true
+            error = true;
           }
         });
-        if (this.state.inputValue === "" || error) {
+        if (this.state.inputValue === '' || error) {
           this.setState({
             error: true,
-            errorText: error ? "Это дело уже есть в списке" : "Кажется, вы забыли ввести дело"
+            errorText: error ? 'Это дело уже есть в списке' : 'Кажется, вы забыли ввести дело'
           });
           setTimeout(() => {
             this.setState({
-                error: "",
-                errorText: "",
+                error: '',
+                errorText: '',
             });
           }, 2000);
         } else {
           this.setState({
-            inputValue: "",
+            inputValue: '',
             error: false
           });
           onClickAdd(this.state.inputValue);        
-    };
+    }
 };
 
     render() {
@@ -61,7 +61,7 @@ class InputItem extends React.Component {
                     className={styles.input}
                     placeholder="Просто введите сюда название дела..." 
                     value={this.state.inputValue}
-                    onChange={(e)=>this.onLabelChange(e)}
+                    onChange={(event) => this.onLabelChange(event)}
                 />
                 <Fab size='small'
                     aria-label='add'

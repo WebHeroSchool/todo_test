@@ -14,16 +14,12 @@
   color: #ccc;
 }
 
-.wrap .checkbox {
-  margin-left: 0;
-}
-
 .item__wrap {
   display: flex;
   justify-content: space-between;
   width: 634px;
   height: 36px;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #ccc;
   border-radius: 41px;
 }
 
@@ -34,6 +30,10 @@ li {
 
 .checkbox {
   border-radius: 50%;
+}
+
+.wrap .checkbox {
+  margin-left: 0;
 }
 
 .noItems {

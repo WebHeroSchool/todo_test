@@ -4,7 +4,7 @@ import { Octokit } from '@octokit/rest';
 import Alert from '@material-ui/lab/Alert';
 import Card from '@material-ui/core/Card';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import noRep from './img/norep.png'
+import noRep from './img/norep.png';
 import classnames from 'classnames';
 
 const octokit = new Octokit();

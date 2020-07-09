@@ -23,7 +23,7 @@ class Footer extends React.Component {
                             </button>
                             <button className={classnames({
                                     [styles.button]: true,
-                                    [styles.selected]: filteredItems === Незавершенные
+                                    [styles.selected]: filteredItems === 'Незавершенные'
                                     })}
                                 onClick={() => onClickFilter('Незавершенные')}>
                                 Незавершенные <span>{activeItems}</span>

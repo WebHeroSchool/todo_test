@@ -1,15 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-import MenuItem from '@material-ui/core/MenuItem';
 import styles from './App.module.css';
-
 import Todo from '../Todo/Todo';
 import About from '../About/About';
 
 const App = () => {
   return (<Router>
       <div className={styles.wrap}>
-              <NavLink to='/' className={styles.link} activeClassName={styles.link__active}><button className={styles.button}>Обо мне</button></NavLink>
+              <NavLink to='/' exact className={styles.link} activeClassName={styles.link__active}><button className={styles.button}>Обо мне</button></NavLink>
               <NavLink to='/todo' className={styles.link} activeClassName={styles.link__active}><button className={styles.button}>Дела</button></NavLink>
       </div>   
 

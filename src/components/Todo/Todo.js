@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
@@ -16,6 +16,15 @@ const Todo = () => {
   const [count, setCount] = useState(initialState.count);
   const [filteredItems, setFilter] = useState(initialState.filteredItems);
 
+  useEffect(() => {
+    const items = localStorage.getItem('items');
+    setItems(JSON.parse(items));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('items', JSON.stringify(items));
+  }, [items]);
+
   const onClickDone = id => {
     const newItemList = items.map(item => {
       const newItem = { ...item };
@@ -30,18 +39,10 @@ const Todo = () => {
     setItems(newItemList);
   };
   
-  const onClickDelete = id => {
-    const newItemList = items.filter(item => {
-      const newItem = {...item };
-      
-      if (item.id !== id) {
-        return newItem;
-      }
-      
-    });
-
+  const onClickDelete = (id) => {
+    const newItemList = items.filter((item) => item.id !== id);
     setItems(newItemList);
-    setCount(count - 1);
+    setCount((count) => count - 1);
   };
 
   const onClickAdd = value => {

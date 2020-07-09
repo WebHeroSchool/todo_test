@@ -1,12 +1,6 @@
 body {
   background-color: #e5e5e5;
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
-}
-
-.MuiFormControl-root {
-  width: 100%;
 }

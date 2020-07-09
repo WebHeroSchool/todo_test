@@ -80,7 +80,7 @@ class About extends React.Component {
                             { isUserError ? <Alert severity="error">SORRY, THE PAGE NOT FOUND</Alert> :
                                 <div>
                                     <div className={styles.user}>
-                                        <img src={infoUser.avatar_url} className={styles.avatar}></img>
+                                        <img alt='/' src={infoUser.avatar_url} className={styles.avatar}></img>
                                             <div className={styles.user__info}>
                                                 <h3 className={styles.user__name}>{infoUser.name}</h3>
                                                 <span className={styles.user__bio}>{infoUser.bio}</span>
@@ -129,7 +129,7 @@ class About extends React.Component {
                             <h3 className={styles.norep__wrap_title}>Репозитории на github.com</h3>
                                 { isRepoError 
                                     ? <div className={styles.norep__wrap}>
-                                        <img className={styles.norep__wrap_img} src={noRep}></img>
+                                        <img alt='/' className={styles.norep__wrap_img} src={noRep}></img>
                                         <p className={styles.norep__wrap_text}>Что-то пошло не так...</p>
                                         <p className={styles.norep__wrap_tryAgain}>Попробуйте <a
                                             href='https://github.com'>загрузить</a> ещё раз</p>
@@ -172,7 +172,7 @@ class About extends React.Component {
                                                         </div>
                                                     </div>
                                                         : <div className={styles.norep__wrap}>
-                                                            <img className={styles.norep__wrap_img} src={noRep}></img>
+                                                            <img alt='/' className={styles.norep__wrap_img} src={noRep}></img>
                                                             <p className={styles.norep__wrap_text}>Репозитории отсутствуют</p>
                                                             <p className={styles.norep__wrap_tryAgain}>Добавьте как минимум один репозиторий на<a
                                                                 href='https://github.com'>github.com</a></p>

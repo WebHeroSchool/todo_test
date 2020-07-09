@@ -50,7 +50,7 @@ class ItemList extends React.Component {
               ))}
             </ul>
             : <div className={styles.noItems}>
-                <img className={styles.noItems__img} src={frame}></img>
+                <img className={styles.noItems__img} alt='/' src={frame}></img>
                 <p className={styles.noItems__text}>Вы ещё не добавили ни одной задачи</p>
                 <p className={styles.noItems__now}>Сделайте это прямо сейчас!</p>
             </div>}

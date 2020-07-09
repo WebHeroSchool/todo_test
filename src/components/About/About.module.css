@@ -1,3 +1,67 @@
 .title {
   text-align: center;
 }
+
+.prelouder__wrap {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+}
+
+.user {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+
+.user__wrap {
+  line-height: .8;
+  padding-top: 40px;
+}
+
+.user__name {
+  font-size: 23px;
+}
+
+.user__info {
+  font-size: 17px;
+}
+
+.list {
+  padding-right: 40px;
+}
+
+.repo {
+  text-decoration: none;
+  color: #ff4081;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  border: 1px solid #ff4081;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 0 0 10px 0;
+  padding: 5px;
+}
+
+.item:hover {
+  background-color: #ff4081;
+}
+
+.item:hover .repo {
+  color: #fff;
+}
+
+h3,
+h4 {
+  color: #424242;
+}

@@ -14,7 +14,7 @@ const App = () => {
     <div className={styles.wrap}>   
 
       <div className={styles.paper__wrap}>
-        <Paper classes={{ root: [styles.paper] }}>
+        <Paper className={styles.paper}>
             <MenuList>
               <Link to='/' className={styles.link}><MenuItem>Обо мне</MenuItem></Link>
               <Link to='/todo' className={styles.link}><MenuItem>Дела</MenuItem></Link>

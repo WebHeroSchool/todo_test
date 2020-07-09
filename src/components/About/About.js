@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './About.module.css';
 import { Octokit } from '@octokit/rest';
-import { ownerDocument } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const octokit = new Octokit();
 
@@ -51,10 +51,8 @@ class About extends React.Component {
     render() {
         const { isLoading, repoList, infoUser, isError } = this.state;
         return (
-            <h1 className={styles.title}>
-                { isLoading ? <div className={styles.loadingio}><div className={styles.ldio}>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                </div></div> : 
+            <div className={styles.title}>
+                { isLoading ? <div className={styles.prelouder__wrap}><CircularProgress /></div> : 
                     <div>
                         { isError ? <Alert severity="error">SORRY, THE PAGE NOT FOUND</Alert> :
                             <div> 
@@ -76,7 +74,7 @@ class About extends React.Component {
                         }
                     </div>
                 }
-            </h1>
+            </div>
         );
     }
 }

@@ -72,9 +72,9 @@ const Todo = () => {
             filter = items;
             break;
    }
-   
+
    const all = items;
-   const activeItems = items.filter(item => item.isDone === fasle);
+   const activeItems = items.filter(item => item.isDone === false);
    const doneItems = items.filter(item => item.isDone === true);
  
     return (

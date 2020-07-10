@@ -58,6 +58,10 @@ const Todo = () => {
     setCount(count + 1);
   };
 
+  const all = items;
+  const activeItems = items.filter(item => !item.isDone);
+  const doneItems = items.filter(item => item.isDone);
+
   const onClickFilter = filtration => setFilter(filtration);
 
   let filter;
@@ -72,10 +76,6 @@ const Todo = () => {
             filter = items;
             break;
    }
-
-   const all = items;
-   const activeItems = items.filter(item => item.isDone === false);
-   const doneItems = items.filter(item => item.isDone === true);
  
     return (
       <Card className={styles.card}>

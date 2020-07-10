@@ -1,28 +1,48 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-const Footer = ({ count }) => (<footer>
-    <p>Осталось выполнить дел: {count} </p>
-    <div className={styles.button}>
-        <Button variant="contained" color="secondary">
-        Все
-        </Button>
-        <Button variant="contained" color="secondary">
-        Активные
-        </Button>
-        <Button variant="contained" color="secondary">
-        Завершенные
-        </Button>
-        <Button variant="contained" color="secondary">
-        Удалить все дела
-        </Button>
-    </div>
-</footer>);
+
+class Footer extends React.Component {
+    render() {
+        const { countAll, countDoneItems, countActiveItems, onClickFilter, filteredItems } = this.props;
+
+        return (
+                <div className={styles.title__wrap}>
+                    <div className={styles.title__name}>
+                        <h3 className={styles.title}>Список моих дел</h3>
+                    </div>
+                    <div className={styles.title__button}>
+                            <button className={classnames({
+                                    [styles.button]: true,
+                                    [styles.selected]: filteredItems === 'Завершенные'
+                                    })}
+                                onClick={() => onClickFilter('Завершенные')}>
+                                Завершенные <span>{countDoneItems}</span>
+                            </button>
+                            <button className={classnames({
+                                    [styles.button]: true,
+                                    [styles.selected]: filteredItems === 'Незавершенные'
+                                    })}
+                                onClick={() => onClickFilter('Незавершенные')}>
+                                Незавершенные <span>{countActiveItems}</span>
+                            </button>
+                            <button className={classnames({
+                                    [styles.button]: true,
+                                    [styles.selected]: filteredItems === 'Все'
+                                    })}
+                                onClick={() => onClickFilter('Все')}>
+                                Все <span>{countAll}</span>
+                            </button>
+                    </div>
+                </div>
+);
+    }
+}
 
 Footer.propTypes = {
-    count: PropTypes.number.isRequired
+    all: PropTypes.number.isRequired
 };
 
 export default Footer;

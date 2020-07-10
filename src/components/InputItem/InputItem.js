@@ -1,53 +1,74 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import styles from './InputItem.module.css';
 import PropTypes from 'prop-types';
+import AddIcon from '@material-ui/icons/Add';
+import Fab from '@material-ui/core/Fab';
+import classnames from 'classnames';
 
 class InputItem extends React.Component {
     state = {
         inputValue: '',
-        inputError: false
+        error: false,
+        errorText: ''
     };
 
+    onLabelChange = event => {
+        this.setState({
+          inputValue: event.target.value,
+        });
+      };
+
     onButtonClick = () => {
-        if (this.state.inputValue !== '') {
+        let { onClickAdd, items } = this.props;
+        let error = false;
+        items.forEach(item => {
+          if (item.value === this.state.inputValue) {
+            error = true;
+          }
+        });
+        if (this.state.inputValue === '' || error) {
+          this.setState({
+            error: true,
+            errorText: error ? 'Это дело уже есть в списке' : 'Кажется, вы забыли ввести дело'
+          });
+          setTimeout(() => {
             this.setState({
-                inputValue: ''
+                error: '',
+                errorText: '',
             });
-            this.props.onClickAdd(this.state.inputValue);
-        }
-        else {
-            this.setState({
-                inputError: true
-            });
+          }, 2000);
+        } else {
+          this.setState({
+            inputValue: '',
+            error: false
+          });
+          onClickAdd(this.state.inputValue);        
     }
 };
 
     render() {
-        const { onClickAdd } = this.props;
-
+        const { error, errorText } = this.state;
         return (
             <div className={styles.wrap}>
-                <TextField 
-                    id="standard-search" 
-                    label="Что нужно сделать?" 
-                    type="search" 
-                    value={this.state.inputValue}
-                    error={this.state.inputError}
-                    onChange={event => this.setState({ 
-                        inputValue: event.target.value.toUpperCase(),
-                        inputError: false
+                <div
+                    className={classnames({
+                        [styles.input_style]: true,
+                        [styles.error]: error
                     })}
-                />
-            <div className={styles.button}>
-                <Button 
-                    variant="contained"
-                    fullWidth
-                    onClick={this.onButtonClick}
                     >
-                    Добавить задание
-                </Button>
+                <p className={styles.error__text}>{errorText}</p>
+                <input 
+                    className={styles.input}
+                    placeholder="Просто введите сюда название дела..." 
+                    value={this.state.inputValue}
+                    onChange={event => this.onLabelChange(event)}
+                />
+                <Fab size='small'
+                    aria-label='add'
+                    className={styles.add}
+                    onClick={this.onButtonClick}>
+                <AddIcon />
+            </Fab>
             </div>
         </div>);
         }

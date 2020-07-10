@@ -58,9 +58,9 @@ const Todo = () => {
     setCount(count + 1);
   };
 
-  const all = items.length;
-  const activeItems = items.filter(item => !item.isDone).length;
-  const doneItems = items.filter(item => item.isDone).length;
+  const all = items;
+  const activeItems = items.filter(item => !item.isDone);
+  const doneItems = items.filter(item => item.isDone);
 
   const onClickFilter = filtration => setFilter(filtration);
 
@@ -82,10 +82,10 @@ const Todo = () => {
         <div className={styles.wrap}>
             <div className={styles.content}>
                 <Footer 
-                    all={all} 
+                    countAll={all.length} 
                     onClickFilter={onClickFilter} 
-                    activeItems={activeItems} 
-                    doneItems={doneItems}
+                    countActiveItems={activeItems.length} 
+                    countDoneItems={doneItems.length}
                     filteredItems={filteredItems} />
                 <div className={styles.items}>
                     <ItemList 

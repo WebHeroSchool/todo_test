@@ -6,7 +6,7 @@ import classnames from 'classnames';
 
 class Footer extends React.Component {
     render() {
-        const { all, doneItems, activeItems, onClickFilter, filteredItems } = this.props;
+        const { countAll, countDoneItems, countActiveItems, onClickFilter, filteredItems } = this.props;
 
         return (
                 <div className={styles.title__wrap}>
@@ -19,21 +19,21 @@ class Footer extends React.Component {
                                     [styles.selected]: filteredItems === 'Завершенные'
                                     })}
                                 onClick={() => onClickFilter('Завершенные')}>
-                                Завершенные <span>{doneItems}</span>
+                                Завершенные <span>{countDoneItems}</span>
                             </button>
                             <button className={classnames({
                                     [styles.button]: true,
                                     [styles.selected]: filteredItems === 'Незавершенные'
                                     })}
                                 onClick={() => onClickFilter('Незавершенные')}>
-                                Незавершенные <span>{activeItems}</span>
+                                Незавершенные <span>{countActiveItems}</span>
                             </button>
                             <button className={classnames({
                                     [styles.button]: true,
                                     [styles.selected]: filteredItems === 'Все'
                                     })}
                                 onClick={() => onClickFilter('Все')}>
-                                Все <span>{all}</span>
+                                Все <span>{countAll}</span>
                             </button>
                     </div>
                 </div>
